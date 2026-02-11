@@ -1,3 +1,37 @@
+/* Construction overlay */
+#construction-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.6);
+}
+
+#construction-overlay.hidden {
+  display: none;
+}
+
+.construction-modal {
+  background: #ffffff;
+  color: #222;
+  max-width: 520px;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.construction-modal h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+#construction-dismiss {
+  margin-top: 1rem;
+}
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 /*
