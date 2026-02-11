@@ -11,6 +11,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
 	</head>
 	<body class="is-preload">
 
@@ -37,35 +38,72 @@
 
 							<!-- Banner -->
 								<section id="banner">
-									<div class="content">
+									<style>
+										#banner .banner-image { float: right; margin: 0 0 1rem 1rem; max-width: 40%; overflow: hidden; }
+										/* make image scale responsively without inline width/height attributes */
+										#banner .banner-image img { display: block; max-width: 100%; height: auto; object-fit: cover; }
+										#banner .banner-content { overflow: hidden; }
+										@media (max-width: 768px) {
+											#banner .banner-image { float: none; margin: 1rem auto; max-width: 90%; }
+											#banner .banner-content { padding-right: 0; }
+										}
+									</style>
+
+									<div class="content banner-content">
 										<header>
-											<h1>Nice to meet you<br />
-											</h1>
-											<p> </p>
+											<h1>Nice to meet you<br /></h1>
+											<p></p>
 										</header>
 										<p style="text-align: justify;">I am a learner with a strong interest in technology and systems thinking, equipped with solid analytical skills and a continuous learning mindset. I am particularly interested in the intersection between software systems, data structures, business models, and real-world applications.
-I approach problems with a structured and logical perspective, focusing on efficiency, scalability, and long-term value. I also value communication and collaboration, believing that technology is not just a tool, but a means to create impact and improve experiences.
-Currently, I am actively developing my technical and analytical capabilities, with the goal of contributing to meaningful a	nd challenging projects in the future.</p>
-										<ul class="actions">
-											
-										</ul>
+								I approach problems with a structured and logical perspective, focusing on efficiency, scalability, and long-term value. I also value communication and collaboration, believing that technology is not just a tool, but a means to create impact and improve experiences.
+								Currently, I am actively developing my technical and analytical capabilities, with the goal of contributing to meaningful and challenging projects in the future.</p>
+
+										<section class="experience" style="margin-top:1rem;">
+											<div style="clear:both;"></div>
+											<header>
+												<h3>Experience</h3>
+											</header>
+											<ul class="alt">
+												<li>
+													<strong>Software Developer Intern</strong> — Company Name<br />
+													<span style="font-size:0.9rem;color:#666">Jun 2024 – Aug 2024</span>
+													<p>Implemented Flutter features, integrated REST APIs, and optimized app performance for production.</p>
+												</li>
+												<li>
+													<strong>Research Assistant</strong> — Organization / University<br />
+													<span style="font-size:0.9rem;color:#666">2023 – 2024</span>
+													<p>Analyzed data, prototyped tools, and documented reproducible workflows to support decision-making.</p>
+												</li>
+												<li>
+													<strong>Freelance Developer</strong> — Self-employed<br />
+													<span style="font-size:0.9rem;color:#666">2021 – Present</span>
+													<p>Delivered end-to-end mobile solutions, focused on clean architecture, testing, and user experience.</p>
+												</li>
+											</ul>
+										</section>
+										<ul class="actions"></ul>
 									</div>
-									<span class="image object">
-										<img src="./images/RMBG.png" alt="" />
-									</span>
+
+									<div class="image object banner-image">
+										<img src="./images/RMBG.png" alt="">
+									</div>
 								</section>
 
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Erat lacinia</h2>
+										<h2>What Skill I Have?</h2>
 									</header>
 									<div class="features">
 										<article>
-											<span class="icon fa-gem"></span>
+											<span class="icon solid" style="display:flex;align-items:center;justify-content:center;min-height:4.5rem;">
+												<img src="./images/flutter-brands-solid-full.svg" alt="Flutter icon" style="width:3.5rem;height:3.5rem;display:block;">
+											</span>
 											<div class="content">
-												<h3>Portitor ullamcorper</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												<h3>Flutter</h3>
+												<p>Developed scalable mobile applications using Flutter.
+Focused on clean architecture, state management, and real-time data handling.
+Integrated backend services and optimized performance for production-ready apps.</p>
 											</div>
 										</article>
 										<article>
