@@ -265,21 +265,25 @@
 			if (!$overlay.length)
 				return;
 
-			// Always show overlay when DOM is ready.
-			$overlay.removeClass('hidden').attr('aria-hidden', 'false');
+			// Only show overlay if not dismissed in this session.
+			if (sessionStorage.getItem('dismissedConstruction') !== '1') {
+				$overlay.removeClass('hidden').attr('aria-hidden', 'false');
 
-			// Dismiss on click.
-			$('#construction-dismiss').on('click', function(event) {
-				event.preventDefault();
-				$overlay.addClass('hidden').attr('aria-hidden', 'true');
-			});
-
-			// Dismiss on ESC.
-			$body.on('keydown', function(event) {
-				if (event.key === 'Escape' && !$overlay.hasClass('hidden')) {
+				// Dismiss on click.
+				$('#construction-dismiss').on('click', function(event) {
+					event.preventDefault();
+					sessionStorage.setItem('dismissedConstruction', '1');
 					$overlay.addClass('hidden').attr('aria-hidden', 'true');
-				}
-			});
+				});
+
+				// Dismiss on ESC.
+				$body.on('keydown', function(event) {
+					if (event.key === 'Escape' && !$overlay.hasClass('hidden')) {
+						sessionStorage.setItem('dismissedConstruction', '1');
+						$overlay.addClass('hidden').attr('aria-hidden', 'true');
+					}
+				});
+			}
 		});
 
 })(jQuery);
